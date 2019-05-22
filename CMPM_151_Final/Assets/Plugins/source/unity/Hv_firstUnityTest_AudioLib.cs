@@ -130,9 +130,10 @@ public class Hv_firstUnityTest_AudioLib : MonoBehaviour {
     return _context.StringToHash(str);
   }
 
-  private void Awake() {
-    _context = new Hv_firstUnityTest_Context((double) AudioSettings.outputSampleRate);
-    
+  void Awake() {
+        print(AudioSettings.outputSampleRate);
+        _context = new Hv_firstUnityTest_Context((double) AudioSettings.outputSampleRate) as Hv_firstUnityTest_Context;
+        print(_context == null?"fail":"success");
   }
   
   private void Update() {
