@@ -1,1 +1,0 @@
-DECLARE_EFFECT("firstUnityTest", Hv_firstUnityTest_UnityPlugin)

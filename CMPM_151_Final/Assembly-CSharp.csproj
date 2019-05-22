@@ -107,7 +107,6 @@
     <Compile Include="Assets\Scripts\fishOffset.cs" />
     <Compile Include="Assets\Scripts\GeyserLaunch.cs" />
     <Compile Include="Assets\Scripts\GizmoLink.cs" />
-    <Compile Include="Assets\Scripts\HeavyController.cs" />
     <Compile Include="Assets\Scripts\InteractMessage.cs" />
     <Compile Include="Assets\Scripts\InteractScript.cs" />
     <Compile Include="Assets\Scripts\InventoryAdd.cs" />
