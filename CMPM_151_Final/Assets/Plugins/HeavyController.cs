@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class HeavyController : MonoBehaviour
 {
-    private Hv_firstUnityTest_AudioLib HeavyScript;
+    private Hv_HeavyDemo_AudioLib HeavyScript;
     // Start is called before the first frame update
     void Start()
     {
-        HeavyScript = GetComponent<Hv_firstUnityTest_AudioLib>();
+        HeavyScript = GetComponent<Hv_HeavyDemo_AudioLib>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown("space")) {
-            HeavyScript.SendFloatToReceiver("Channel-A", 100);
+            HeavyScript.SendFloatToReceiver("onOff", 1);
+        }
+        if (Input.GetKeyDown("q"))
+        {
+            HeavyScript.SendFloatToReceiver("onOff", 0);
         }
     }
 }

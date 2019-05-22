@@ -198,21 +198,14 @@ PrefabInstance:
         type: 3}
       propertyPath: HeavyScript
       value: 
-      objectReference: {fileID: 870347276}
+      objectReference: {fileID: 0}
+    - target: {fileID: 441406083869719095, guid: 3ab4304f5622f6d4fa428a1b9a4c40dd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab4304f5622f6d4fa428a1b9a4c40dd, type: 3}
---- !u!114 &870347276 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4405508442289091748, guid: 3ab4304f5622f6d4fa428a1b9a4c40dd,
-    type: 3}
-  m_PrefabInstance: {fileID: 49862541}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38225be9a5e4a4639b318aa6ef899634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1083568558
 PrefabInstance:
   m_ObjectHideFlags: 0
