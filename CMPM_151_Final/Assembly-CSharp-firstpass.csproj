@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{2A208415-8833-91DC-AD22-4292F9EC2FDB}</ProjectGuid>
+    <ProjectGuid>{0FE060C6-DCD1-6DFB-FCE7-3727F938659A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -61,42 +61,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
-    <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\Displace.cs" />
-    <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
-    <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
-    <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
-    <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
-    <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
-    <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
-    <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
-    <None Include="Assets\Standard Assets\Environment\Water (Basic)\DO_NOT_WORK_IN_VR.txt" />
-    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
-    <None Include="Assets\Standard Assets\Environment\Water\DO_NOT_WORK_IN_VR.txt" />
-    <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
-    <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
-    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
-    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+    <Compile Include="Assets\Plugins\source\unity\Hv_firstUnityTest_AudioLib.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2018.3.5f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -303,37 +288,37 @@
       <HintPath>/Applications/Unity/Hub/Editor/2018.3.5f1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Substance.Game">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="KdTreeLib">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/Hidden-Harmony/HiddenHarmony/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Hub/Editor/2018.3.5f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>

@@ -123,25 +123,25 @@
     <Compile Include="Assets\AssistiveTools\ProCore\ProBuilder\Editor\pb_ScenePostProcessor.cs" />
     <Compile Include="Assets\Editor\TransitionEditor.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2018.3.5f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -378,55 +378,55 @@
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Substance.Game">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Assets/Allegorithmic/Plugins/Substance/Livelink/Editor/Plugins/websocket-sharp.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/Allegorithmic/Plugins/Substance/Livelink/Editor/Plugins/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="SourceUnityLib">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Assets/Allegorithmic/Plugins/Substance/Substance Source/Editor/SourceUnityLib.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/Allegorithmic/Plugins/Substance/Substance Source/Editor/SourceUnityLib.dll</HintPath>
     </Reference>
     <Reference Include="Substance.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Assets/Allegorithmic/Plugins/Substance/Substance Engine/Editor/Substance.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/Allegorithmic/Plugins/Substance/Substance Engine/Editor/Substance.Editor.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="KdTreeLib">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderEditor-Unity5">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Assets/AssistiveTools/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/PackageCache/com.unity.ads@2.3.1/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.ads@2.3.1/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>/Users/kiefernemeth/Documents/Unity Games/CMPM_151_Final/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>/Users/kiefernemeth/Documents/Unity Games/proceduralAudio/CMPM_151_Final/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Hub/Editor/2018.3.5f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>
@@ -457,6 +457,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{0FE060C6-DCD1-6DFB-FCE7-3727F938659A}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{F8FEAAF5-D61A-8D5A-08BD-A2BAB0C3F748}</Project>
       <Name>Assembly-CSharp</Name>
