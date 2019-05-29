@@ -61,16 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BackgroundAudio.cs" />
-    <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
-    <Compile Include="Assets\Scripts\Backup\Backup_SoundObject.cs" />
-    <Compile Include="Assets\Scripts\Backup\MusicChange.cs" />
     <Compile Include="Assets\Scripts\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\ComboMaster.cs" />
     <Compile Include="Assets\Scripts\ComboSystem.cs" />
-    <Compile Include="Assets\Scripts\ComposeModeTransition.cs" />
-    <Compile Include="Assets\Scripts\Count.cs" />
-    <Compile Include="Assets\Scripts\Drag.cs" />
     <Compile Include="Assets\Scripts\duringInteract.cs" />
     <Compile Include="Assets\Scripts\EmptyGameObjectGizmo.cs" />
     <Compile Include="Assets\Scripts\FirstPersonControl.cs" />
@@ -79,34 +72,14 @@
     <Compile Include="Assets\Scripts\GizmoLink.cs" />
     <Compile Include="Assets\Scripts\InteractMessage.cs" />
     <Compile Include="Assets\Scripts\InteractScript.cs" />
-    <Compile Include="Assets\Scripts\InventoryAdd.cs" />
-    <Compile Include="Assets\Scripts\LockSoundObjRotation.cs" />
     <Compile Include="Assets\Scripts\lookAt.cs" />
     <Compile Include="Assets\Scripts\MainMenuUI.cs" />
     <Compile Include="Assets\Scripts\Mushrooms.cs" />
     <Compile Include="Assets\Scripts\NotePlay.cs" />
     <Compile Include="Assets\Scripts\PathFollower.cs" />
     <Compile Include="Assets\Scripts\PathFollowerGizmo.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\Pickup.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Progression\DestroyOnce.cs" />
-    <Compile Include="Assets\Scripts\Progression\DestroyWhile.cs" />
-    <Compile Include="Assets\Scripts\Progression\TriggerOnce.cs" />
-    <Compile Include="Assets\Scripts\Progression\TriggerPrimer.cs" />
-    <Compile Include="Assets\Scripts\Progression\WhileTrigger.cs" />
-    <Compile Include="Assets\Scripts\RandomIdle.cs" />
-    <Compile Include="Assets\Scripts\SoundObject.cs" />
-    <Compile Include="Assets\Scripts\SoundObjectCompose.cs" />
-    <Compile Include="Assets\Scripts\SoundObjectDestroy.cs" />
-    <Compile Include="Assets\Scripts\SoundObjectParticles.cs" />
-    <Compile Include="Assets\Scripts\StaffControl.cs" />
-    <Compile Include="Assets\Scripts\Stage.cs" />
-    <Compile Include="Assets\Scripts\StartMenu.cs" />
-    <Compile Include="Assets\Scripts\Timekeeper.cs" />
-    <Compile Include="Assets\Scripts\Transition.cs" />
-    <Compile Include="Assets\Scripts\UnderwaterEffect.cs" />
     <Compile Include="Assets\Testing Misc\Rotate.cs" />
     <None Include="Assets\Materials\Shaders\CreatureSparkle_ScreenPos.shader" />
     <None Include="Assets\Materials\Shaders\ToonOutlineEmission.shader" />
