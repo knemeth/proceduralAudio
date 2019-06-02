@@ -57,6 +57,9 @@ public class PlayerMovement : MonoBehaviour {
     private Camera camera; //the main camera on the player object
     private AudioSource audio; //the audio source on the player object
 
+    // PURE DATA SHIT
+    private Hv_HeavyDemo_AudioLib HeavyScript;
+
     // Use this for initialization
     void Start () {
         yVelocity = terminalVelocity;
@@ -64,6 +67,7 @@ public class PlayerMovement : MonoBehaviour {
         particles = this.transform.Find("GlideParticles").gameObject.GetComponent<ParticleSystem>();
         camera = this.transform.Find("MainCamera").gameObject.GetComponent<Camera>();
         audio = this.transform.Find("AudioSource").gameObject.GetComponent<AudioSource>();
+        HeavyScript = GameObject.Find("HeavyController").GetComponent<Hv_HeavyDemo_AudioLib>();
     }    
 
     // Update is called once per frame
@@ -78,6 +82,7 @@ public class PlayerMovement : MonoBehaviour {
             if(Input.GetKeyDown(KeyCode.Space)) {         
                 jumping = true;
                 yVelocity = jump;
+                HeavyScript.SendFloatToReceiver("onOff", 1);
             }
             else if(!Input.GetKey(KeyCode.Space)) {        
                 yVelocity = terminalVelocity;
@@ -94,7 +99,8 @@ public class PlayerMovement : MonoBehaviour {
         if(Input.GetKeyUp(KeyCode.Space))
         {
             jumping = false;
-            if(yVelocity > terminalVelocity + (terminalVelocity * 0.15f)){
+            HeavyScript.SendFloatToReceiver("onOff", 0);
+            if (yVelocity > terminalVelocity + (terminalVelocity * 0.15f)){
                 yVelocity = terminalVelocity + (terminalVelocity * 0.15f);
             }
             if(particles.isPlaying){

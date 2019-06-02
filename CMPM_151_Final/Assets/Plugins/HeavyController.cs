@@ -11,7 +11,6 @@ public class HeavyController : MonoBehaviour
     void Start()
     {
         HeavyScript = GetComponent<Hv_HeavyDemo_AudioLib>();
-        print(HeavyScript);
     }
 
     // Update is called once per frame
