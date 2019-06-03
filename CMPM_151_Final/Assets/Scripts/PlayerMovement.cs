@@ -59,6 +59,8 @@ public class PlayerMovement : MonoBehaviour {
 
     // PURE DATA SHIT
     private Hv_HeavyDemo_AudioLib HeavyScript;
+    public float freqCenter = 314;
+    public Transform spawn;
 
     // Use this for initialization
     void Start () {
@@ -99,7 +101,6 @@ public class PlayerMovement : MonoBehaviour {
         if(Input.GetKeyUp(KeyCode.Space))
         {
             jumping = false;
-            HeavyScript.SendFloatToReceiver("onOff", 0);
             if (yVelocity > terminalVelocity + (terminalVelocity * 0.15f)){
                 yVelocity = terminalVelocity + (terminalVelocity * 0.15f);
             }
@@ -108,7 +109,18 @@ public class PlayerMovement : MonoBehaviour {
             }
         }
 
-        if(yVelocity > 0){
+        // Start/Stop Pd Synth on movement
+        if(isMoving())
+        {
+            HeavyScript.SendFloatToReceiver("onOff", 1);
+        }
+        else
+        {
+            HeavyScript.SendFloatToReceiver("onOff", 0);
+        }
+
+
+        if (yVelocity > 0){
             if(!Physics.CapsuleCast (p1, p2, character.radius, Vector3.down, canJump)){
                 yVelocity -= gravity; //increases jump velocity when jumping and before jump total is reached
             }
@@ -137,6 +149,14 @@ public class PlayerMovement : MonoBehaviour {
         movement *= Time.fixedDeltaTime; //Ensures the speed the player moves does not change based on frame rate
         movement = transform.TransformDirection(movement);
         character.Move (movement);
+
+        // Change the synth frequency based on height
+        HeavyScript.SendFloatToReceiver("freq", freqCenter + (transform.position.y * 10));
+        // return to spawn point if below 0 
+        if(transform.position.y <= 0)
+        {
+            transform.position = spawn.transform.position;
+        }
     }
 
     public Vector2 Glide(){
@@ -193,6 +213,7 @@ public class PlayerMovement : MonoBehaviour {
     public void toBoostFOV(){
         if(camera.fieldOfView < boostedFOV){
             camera.fieldOfView = Mathf.MoveTowards(camera.fieldOfView, boostedFOV, changeSpeedFOV);
+            HeavyScript.SendFloatToReceiver("waveToggle", 0);
         }
         else if(camera.fieldOfView > boostedFOV){
             camera.fieldOfView = boostedFOV;
@@ -202,7 +223,8 @@ public class PlayerMovement : MonoBehaviour {
     public void toBaseFOV(){
         if(camera.fieldOfView > baseFOV){
                 camera.fieldOfView = Mathf.MoveTowards(camera.fieldOfView, baseFOV, changeSpeedFOV);
-            }
+            HeavyScript.SendFloatToReceiver("waveToggle", 1);
+        }
             else if(camera.fieldOfView < baseFOV){
                 camera.fieldOfView = baseFOV;
             }
