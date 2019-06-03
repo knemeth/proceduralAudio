@@ -1,7 +1,7 @@
 #N canvas -8 -8 2560 1357 10;
 #X obj 109 484 Synth_Patch, f 30;
 #X msg 10 27 \; pd dsp \$1;
-#X obj 10 9 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 10 9 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X text 32 8 dsp toggle;
 #X obj 227 386 r attack1 @hv_param 10 1000 10;
