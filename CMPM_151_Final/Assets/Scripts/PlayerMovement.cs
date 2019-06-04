@@ -58,7 +58,11 @@ public class PlayerMovement : MonoBehaviour {
     private AudioSource audio; //the audio source on the player object
 
     // PURE DATA SHIT
-    private Hv_UnitySynth_AudioLib HeavyScript;
+    //private Hv_UnitySynth_AudioLib HeavyScript;
+    private Hv_walkSynth_AudioLib walkSynth;
+    private Hv_sprintSynth_AudioLib sprintSynth;
+    private Hv_glideSynth_AudioLib glideSynth;
+    private Hv_bgSynth_AudioLib bgSynth;
     public Transform spawn;
 
     // Use this for initialization
@@ -68,7 +72,12 @@ public class PlayerMovement : MonoBehaviour {
         particles = this.transform.Find("GlideParticles").gameObject.GetComponent<ParticleSystem>();
         camera = this.transform.Find("MainCamera").gameObject.GetComponent<Camera>();
         audio = this.transform.Find("AudioSource").gameObject.GetComponent<AudioSource>();
-        HeavyScript = GameObject.Find("HeavyController").GetComponent<Hv_UnitySynth_AudioLib>();
+        //HeavyScript = GameObject.Find("HeavyController").GetComponent<Hv_UnitySynth_AudioLib>();
+        GameObject controller = GameObject.Find("HeavyController");
+        walkSynth = controller.GetComponentInChildren<Hv_walkSynth_AudioLib>();
+        sprintSynth = controller.GetComponentInChildren<Hv_sprintSynth_AudioLib>();
+        glideSynth = controller.GetComponentInChildren<Hv_glideSynth_AudioLib>();
+        bgSynth = controller.GetComponentInChildren<Hv_bgSynth_AudioLib>();
     }    
 
     // Update is called once per frame
@@ -110,13 +119,11 @@ public class PlayerMovement : MonoBehaviour {
         // Start/Stop Pd Synth on movement
         if(isMoving())
         {
-            HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol1, 0.1f);
-            //HeavyScript.SendFloatToReceiver("vol2", 1);
+            walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, 0.1f);
         }
         else
         {
-            HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol1, 0);
-            //HeavyScript.SendFloatToReceiver("vol2", 0);
+            walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, 0);
         }
 
         if (yVelocity > 0){
@@ -150,7 +157,7 @@ public class PlayerMovement : MonoBehaviour {
         character.Move (movement);
 
         // Change the synth frequency based on height
-        HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Attack1, (transform.position.y * 10));
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Attack2, (transform.position.y * 10));
         // return to spawn point if below 0 
         if(transform.position.y <= 0)
         {
@@ -177,13 +184,13 @@ public class PlayerMovement : MonoBehaviour {
                 }
                 toGlideVolume();
                 toBoostFOV();
-                HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol3, 0.1f);
+                glideSynth.SetFloatParameter(Hv_glideSynth_AudioLib.Parameter.Vol2, 0.1f);
             }
         }
         else{
             returnVector.x = 0;
             returnVector.y = -terminalVelocity + yVelocity;
-            HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol3, 0);
+            glideSynth.SetFloatParameter(Hv_glideSynth_AudioLib.Parameter.Vol2, 0);
             if (audio.isPlaying){
                 fadeToMute();
             }
@@ -194,11 +201,11 @@ public class PlayerMovement : MonoBehaviour {
     public float Sprint(){
     if(Input.GetKey(KeyCode.LeftShift) && isMoving() && Glide().x == 0){
             toBoostFOV();
-            HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol2, 0.1f);
+            sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Vol2, 0.1f);
             return sprintBoost;
         }
         else{
-            HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol2, 0);
+            sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Vol2, 0);
             return 0;
         }
     }

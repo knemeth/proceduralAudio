@@ -26,7 +26,7 @@
 #X obj 831 319 r release2 @hv_param 10 1000 150;
 #X obj 843 431 r vol2 @hv_param 0 1 0.1;
 #X obj 447 62 r metro @hv_param 100 1000 400;
-#X obj 35 450 Synth_Patch2, f 130;
+#X obj 36 450 Synth_Patch3, f 130;
 #X connect 6 0 27 0;
 #X connect 7 0 27 1;
 #X connect 8 0 27 2;
