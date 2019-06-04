@@ -58,8 +58,7 @@ public class PlayerMovement : MonoBehaviour {
     private AudioSource audio; //the audio source on the player object
 
     // PURE DATA SHIT
-    private Hv_HeavyDemo_AudioLib HeavyScript;
-    public float freqCenter = 314;
+    private Hv_UnitySynth_AudioLib HeavyScript;
     public Transform spawn;
 
     // Use this for initialization
@@ -69,7 +68,7 @@ public class PlayerMovement : MonoBehaviour {
         particles = this.transform.Find("GlideParticles").gameObject.GetComponent<ParticleSystem>();
         camera = this.transform.Find("MainCamera").gameObject.GetComponent<Camera>();
         audio = this.transform.Find("AudioSource").gameObject.GetComponent<AudioSource>();
-        HeavyScript = GameObject.Find("HeavyController").GetComponent<Hv_HeavyDemo_AudioLib>();
+        HeavyScript = GameObject.Find("HeavyController").GetComponent<Hv_UnitySynth_AudioLib>();
     }    
 
     // Update is called once per frame
@@ -84,7 +83,6 @@ public class PlayerMovement : MonoBehaviour {
             if(Input.GetKeyDown(KeyCode.Space)) {         
                 jumping = true;
                 yVelocity = jump;
-                HeavyScript.SendFloatToReceiver("onOff", 1);
             }
             else if(!Input.GetKey(KeyCode.Space)) {        
                 yVelocity = terminalVelocity;
@@ -112,13 +110,14 @@ public class PlayerMovement : MonoBehaviour {
         // Start/Stop Pd Synth on movement
         if(isMoving())
         {
-            HeavyScript.SendFloatToReceiver("onOff", 1);
+            HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol1, 0.1f);
+            //HeavyScript.SendFloatToReceiver("vol2", 1);
         }
         else
         {
-            HeavyScript.SendFloatToReceiver("onOff", 0);
+            HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol1, 0);
+            //HeavyScript.SendFloatToReceiver("vol2", 0);
         }
-
 
         if (yVelocity > 0){
             if(!Physics.CapsuleCast (p1, p2, character.radius, Vector3.down, canJump)){
@@ -151,7 +150,7 @@ public class PlayerMovement : MonoBehaviour {
         character.Move (movement);
 
         // Change the synth frequency based on height
-        HeavyScript.SendFloatToReceiver("freq", freqCenter + (transform.position.y * 10));
+        HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Attack1, (transform.position.y * 10));
         // return to spawn point if below 0 
         if(transform.position.y <= 0)
         {
@@ -178,12 +177,14 @@ public class PlayerMovement : MonoBehaviour {
                 }
                 toGlideVolume();
                 toBoostFOV();
+                HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol3, 0.1f);
             }
         }
         else{
             returnVector.x = 0;
             returnVector.y = -terminalVelocity + yVelocity;
-            if(audio.isPlaying){
+            HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol3, 0);
+            if (audio.isPlaying){
                 fadeToMute();
             }
         }
@@ -193,9 +194,11 @@ public class PlayerMovement : MonoBehaviour {
     public float Sprint(){
     if(Input.GetKey(KeyCode.LeftShift) && isMoving() && Glide().x == 0){
             toBoostFOV();
+            HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol2, 0.1f);
             return sprintBoost;
         }
         else{
+            HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Vol2, 0);
             return 0;
         }
     }
@@ -213,7 +216,6 @@ public class PlayerMovement : MonoBehaviour {
     public void toBoostFOV(){
         if(camera.fieldOfView < boostedFOV){
             camera.fieldOfView = Mathf.MoveTowards(camera.fieldOfView, boostedFOV, changeSpeedFOV);
-            HeavyScript.SendFloatToReceiver("waveToggle", 0);
         }
         else if(camera.fieldOfView > boostedFOV){
             camera.fieldOfView = boostedFOV;
@@ -222,8 +224,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public void toBaseFOV(){
         if(camera.fieldOfView > baseFOV){
-                camera.fieldOfView = Mathf.MoveTowards(camera.fieldOfView, baseFOV, changeSpeedFOV);
-            HeavyScript.SendFloatToReceiver("waveToggle", 1);
+            camera.fieldOfView = Mathf.MoveTowards(camera.fieldOfView, baseFOV, changeSpeedFOV);
         }
             else if(camera.fieldOfView < baseFOV){
                 camera.fieldOfView = baseFOV;

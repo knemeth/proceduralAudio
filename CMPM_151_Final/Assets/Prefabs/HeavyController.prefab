@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1628073480712362437
+--- !u!1 &8835887916922829356
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1628073480712362491}
-  - component: {fileID: 1628073480712362489}
-  - component: {fileID: 1628073480712362490}
-  - component: {fileID: 1628073480712362488}
+  - component: {fileID: 8835887916922829330}
+  - component: {fileID: 8835887916922829329}
+  - component: {fileID: 8835887916922829335}
+  - component: {fileID: 8835887916922829334}
   m_Layer: 0
   m_Name: HeavyController
   m_TagString: Untagged
@@ -19,13 +19,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1628073480712362491
+--- !u!4 &8835887916922829330
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628073480712362437}
+  m_GameObject: {fileID: 8835887916922829356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.560925, y: 4.9053926, z: -5.9022665}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,39 +33,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1628073480712362489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628073480712362437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63d9299912d28407299110d120cab502, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freq: 314
-  waveToggle: 1
---- !u!114 &1628073480712362490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628073480712362437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41fb80d15985e4f9290a947743bb17fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!82 &1628073480712362488
+--- !u!82 &8835887916922829329
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628073480712362437}
+  m_GameObject: {fileID: 8835887916922829356}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -155,3 +129,107 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8835887916922829335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835887916922829356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5aae6973f32f40ad8136ac2d7b7a80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack1: 10
+  attack2: 10
+  attack3: 10
+  attack4: 10
+  decay1: 150
+  decay2: 150
+  decay3: 150
+  decay4: 150
+  freqMod1: 0
+  freqMod2: 0
+  freqMod3: 0
+  freqMod4: 0
+  highPass1: 0
+  highPass2: 0
+  highPass3: 0
+  highPass4: 0
+  lowPass1: 100
+  lowPass2: 100
+  lowPass3: 100
+  lowPass4: 100
+  midiOffset1: 50
+  midiOffset2: 50
+  midiOffset3: 50
+  midiOffset4: 50
+  modFactor1: 0
+  modFactor2: 0
+  modFactor3: 0
+  modFactor4: 0
+  oscMix1: 0
+  oscMix2: 0
+  oscMix3: 0
+  oscMix4: 0
+  release1: 150
+  release2: 150
+  release3: 150
+  release4: 150
+  seq1_0: 0
+  seq1_1: 4
+  seq1_2: 7
+  seq1_3: 11
+  seq1_4: 7
+  seq1_5: 4
+  seq1_6: 0
+  seq1_7: 4
+  seq2_0: 0
+  seq2_1: 4
+  seq2_2: 7
+  seq2_3: 11
+  seq2_4: 7
+  seq2_5: 4
+  seq2_6: 0
+  seq2_7: 4
+  seq3_0: 0
+  seq3_1: 4
+  seq3_2: 7
+  seq3_3: 11
+  seq3_4: 7
+  seq3_5: 4
+  seq3_6: 0
+  seq3_7: 4
+  seq4_0: 0
+  seq4_1: 4
+  seq4_2: 7
+  seq4_3: 11
+  seq4_4: 7
+  seq4_5: 4
+  seq4_6: 0
+  seq4_7: 4
+  squareMix1: 1
+  squareMix2: 1
+  squareMix3: 1
+  squareMix4: 1
+  sustain1: 0.5
+  sustain2: 0.5
+  sustain3: 0.5
+  sustain4: 0.5
+  vol1: 0.1
+  vol2: 0.1
+  vol3: 0.1
+  vol4: 0.1
+--- !u!114 &8835887916922829334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835887916922829356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3258ccb38fbed466d9ff08ff1fa8eccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
