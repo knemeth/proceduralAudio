@@ -28,6 +28,7 @@ public class HeavyInit : MonoBehaviour
         //
         // Synth 4 : BG Music
         bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Vol2, 0.3f);
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Attack2, 500);
 
         //
         // Synth 1 : Walking
@@ -45,7 +46,7 @@ public class HeavyInit : MonoBehaviour
         walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Oscmix2, 0.8f);
         walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Squaremix2, 0.2f);
         // ADSR
-        walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Attack2, 50);
+        walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Attack2, 10);
         walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Decay2, 150);
         // Pitch
         walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Midioffset2, 45);
