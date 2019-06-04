@@ -30,8 +30,8 @@ public class HeavyInit : MonoBehaviour
         HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Seq1_6, 4);
         HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Seq1_7, 2);
         // Mix
-        HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Oscmix1, 1);
-        HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Squaremix1, 0);
+        HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Oscmix1, 0.8f);
+        HeavyScript.SetFloatParameter(Hv_UnitySynth_AudioLib.Parameter.Squaremix1, 0.2f);
 
         //
         // Synth 2 : Sprinting
