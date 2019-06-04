@@ -119,7 +119,7 @@ public class PlayerMovement : MonoBehaviour {
         // Start/Stop Pd Synth on movement
         if(isMoving())
         {
-            walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, 0.1f);
+            walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, 0.2f);
         }
         else
         {
@@ -184,7 +184,7 @@ public class PlayerMovement : MonoBehaviour {
                 }
                 toGlideVolume();
                 toBoostFOV();
-                glideSynth.SetFloatParameter(Hv_glideSynth_AudioLib.Parameter.Vol2, 0.1f);
+                glideSynth.SetFloatParameter(Hv_glideSynth_AudioLib.Parameter.Vol2, 0.3f);
             }
         }
         else{
@@ -201,7 +201,7 @@ public class PlayerMovement : MonoBehaviour {
     public float Sprint(){
     if(Input.GetKey(KeyCode.LeftShift) && isMoving() && Glide().x == 0){
             toBoostFOV();
-            sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Vol2, 0.1f);
+            sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Vol2, 0.3f);
             return sprintBoost;
         }
         else{
