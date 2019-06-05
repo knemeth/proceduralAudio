@@ -27,8 +27,11 @@ public class HeavyInit : MonoBehaviour
 
         //
         // Synth 4 : BG Music
-        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Vol2, 0.3f);
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Vol2, 0.2f);
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Oscmix2, 0.8f);
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Squaremix2, 0.2f);
         bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Attack2, 500);
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Decay2, 500);
 
         //
         // Synth 1 : Walking
@@ -43,20 +46,28 @@ public class HeavyInit : MonoBehaviour
         walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Seq2_6, 4);
         walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Seq2_7, 2);
         // Mix
-        walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Oscmix2, 0.8f);
-        walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Squaremix2, 0.2f);
+        walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Oscmix2, 0.7f);
+        walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Squaremix2, 0.3f);
         // ADSR
         walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Attack2, 10);
         walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Decay2, 150);
+        walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Release2, 150);
         // Pitch
         walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Midioffset2, 45);
+        walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Lowpass2, 75);
+
 
         //
         // Synth 2 : Sprinting
         sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Freqmod2, 100);
-        sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Modfactor2, 5);
+        sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Modfactor2, 10);
 
-        sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Midioffset2, 58);
+        sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Midioffset2, 57);
+
+        sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Decay2, 100);
+
+        sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Lowpass2, 65);
+        sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Highpass2, 20);
 
         //
         // Synth 3 : Gliding

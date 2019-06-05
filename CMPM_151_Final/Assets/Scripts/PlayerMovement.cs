@@ -157,9 +157,12 @@ public class PlayerMovement : MonoBehaviour {
         character.Move (movement);
 
         // Change the synth frequency based on height
-        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Attack2, (transform.position.y * 10));
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Lowpass2, 10 + (transform.position.y * 10));
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Highpass2, 30 - (transform.position.y * 10));
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Freqmod2, (transform.position.x * 10));
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Release2, (transform.position.z * 10));
         // return to spawn point if below 0 
-        if(transform.position.y <= 0)
+        if (transform.position.y <= 0)
         {
             transform.position = spawn.transform.position;
         }
@@ -184,7 +187,7 @@ public class PlayerMovement : MonoBehaviour {
                 }
                 toGlideVolume();
                 toBoostFOV();
-                glideSynth.SetFloatParameter(Hv_glideSynth_AudioLib.Parameter.Vol2, 0.3f);
+                glideSynth.SetFloatParameter(Hv_glideSynth_AudioLib.Parameter.Vol2, 0.2f);
             }
         }
         else{
@@ -201,7 +204,7 @@ public class PlayerMovement : MonoBehaviour {
     public float Sprint(){
     if(Input.GetKey(KeyCode.LeftShift) && isMoving() && Glide().x == 0){
             toBoostFOV();
-            sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Vol2, 0.3f);
+            sprintSynth.SetFloatParameter(Hv_sprintSynth_AudioLib.Parameter.Vol2, 0.2f);
             return sprintBoost;
         }
         else{
