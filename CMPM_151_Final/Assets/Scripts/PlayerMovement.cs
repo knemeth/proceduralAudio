@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
@@ -119,11 +120,13 @@ public class PlayerMovement : MonoBehaviour {
         // Start/Stop Pd Synth on movement
         if(isMoving())
         {
-            walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, 0.2f);
+            fadeWalkIn(0.2f);
+            //walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, 0.2f);
         }
         else
         {
-            walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, 0);
+            fadeWalkOut();
+            //walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, 0);
         }
 
         if (yVelocity > 0){
@@ -156,13 +159,18 @@ public class PlayerMovement : MonoBehaviour {
         movement = transform.TransformDirection(movement);
         character.Move (movement);
 
-        // Change the synth frequency based on height
+        // Change the bg synth based on position
         bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Lowpass2, 10 + (transform.position.y * 10));
         bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Highpass2, 30 - (transform.position.y * 10));
         bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Freqmod2, (transform.position.x * 10));
-        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Release2, (transform.position.z * 10));
+        bgSynth.SetFloatParameter(Hv_bgSynth_AudioLib.Parameter.Modfactor2, transform.position.x);
+        // Change glide synth based on position
+        glideSynth.SetFloatParameter(Hv_glideSynth_AudioLib.Parameter.Freqmod2, (transform.position.x * 10));
+        glideSynth.SetFloatParameter(Hv_glideSynth_AudioLib.Parameter.Modfactor2, (transform.position.x + transform.position.z) / 2);
+
+
         // return to spawn point if below 0 
-        if (transform.position.y <= 0)
+        if (transform.position.y <= -2)
         {
             transform.position = spawn.transform.position;
         }
@@ -259,6 +267,32 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if(audio.volume == 0){
             audio.Stop();
+        }
+    }
+
+    public void fadeWalkOut()
+    {
+        float current = walkSynth.GetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2);
+        if (current > 0)
+        {
+            walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, Mathf.MoveTowards(current, 0, 0.05f));
+        }
+        else if(current < 0)
+        {
+            walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, 0);
+        }
+    }
+
+    public void fadeWalkIn(float val)
+    {
+        float current = walkSynth.GetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2);
+        if (current < val)
+        {
+            walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, Mathf.MoveTowards(current, val, 0.005f));
+        }
+        else if (current > val)
+        {
+            walkSynth.SetFloatParameter(Hv_walkSynth_AudioLib.Parameter.Vol2, val);
         }
     }
 }
